@@ -1,0 +1,56 @@
+@import './styles/colors.scss';
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+a {
+  color: $black;
+}
+img {
+  width: 100%;
+}
+button,
+a {
+  user-select: none;
+  border: none;
+  cursor: pointer;
+}
+html {
+  font-size: 62.5%;
+}
+body,
+input,
+button {
+  font-family: 'Nunito Sans', sans-serif;
+}
+// h1,h2,h3,h4,h5,h6{}
+.App {
+  position: relative;
+  $white: #fff;
+}
+.nav-header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+  // gap: min(20vw, 15rem);
+  padding: 2rem;
+  padding-left: 4rem;
+  position: absolute;
+  // background-color: rgb(156, 156, 156);
+  z-index: 2;
+}
+@media only screen and (max-width: 700px) {
+  html {
+    font-size: 52.5%;
+  }
+  .nav-header-container {
+    width: 100%;
+  }
+}

@@ -1,0 +1,113 @@
+@import './colors.scss';
+
+.home-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+.home-wrapper {
+  padding: 2rem;
+  position: relative;
+  background-color: $white;
+}
+.home-section-wrapper {
+  display: grid;
+  grid-template-columns: 5rem 1fr;
+  grid-template-rows: 1fr auto;
+
+  min-height: 100%;
+  gap: 3rem;
+}
+
+// SOCIALS ---
+.socials-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding-top: 10rem;
+  gap: 5rem;
+  width: 100%;
+  grid-column: 1;
+  grid-row: 1 / -1;
+  position: relative;
+  text-align: center;
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 2px;
+    height: 80%;
+    background-color: lighten($lightBlue, 30);
+  }
+}
+
+// BG TITLE ---
+.company-description__bg-title {
+  font-size: 8rem;
+  color: $black;
+  opacity: 0.05;
+  position: absolute;
+  top: 25%;
+  left: 20%;
+  user-select: none;
+  word-wrap: break-word;
+  z-index: -1;
+}
+
+// MAIN ---
+.company-description-wrapper {
+  grid-column: 2;
+  grid-row: 1 / 2;
+  gap: 20px;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+.company-desc-description-wrapper {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.company-desc-title {
+  padding-top: 2rem;
+  font-size: 2.8rem;
+  font-weight: 900;
+  max-width: min(90%, 20rem);
+}
+.company-desc-description {
+  font-size: 1.4rem;
+  max-width: min(85%, 30rem);
+}
+
+// FOOTER ---
+.home-footer {
+  grid-column: 2;
+  grid-row: 2 / 3;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 2rem;
+}
+.img-container {
+  min-height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: $black;
+  z-index: -1;
+}
+@media only screen and (max-width: 700px) {
+  .home-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  .home-wrapper {
+    padding: 1rem;
+  }
+}

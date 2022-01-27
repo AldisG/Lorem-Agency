@@ -1,0 +1,68 @@
+@import './colors.scss';
+$nextBtnSize: 6rem;
+
+.next-slide-btn__icon {
+  width: 1.4rem;
+}
+.btn {
+  box-shadow: 0px 2rem 2rem $blackShadow;
+  transition: box-shadow 0.2s, background-color 0.2s, color 0.2s, outline 0.2s;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0px 1.5rem 1.5rem $blackShadowFocus;
+  }
+  &:active {
+    box-shadow: 0px 1rem 1rem $blackShadowFocus;
+  }
+}
+.button-go-to {
+  padding: 0.8rem;
+  font-size: 1.2rem;
+  height: max-content;
+  max-width: max-content;
+  background-color: $white;
+  color: $black;
+  border-radius: 0.8rem;
+  outline: 1px solid $black;
+
+  &:hover,
+  &:focus {
+    color: $black;
+    outline: 1px solid transparent;
+  }
+  &:active {
+    background-color: $lightBlue;
+    color: $white;
+  }
+}
+
+.next-slide-btn {
+  width: $nextBtnSize;
+  height: $nextBtnSize;
+  background-color: $green;
+  color: $white;
+  border-radius: $nextBtnSize;
+  box-shadow: 0px 2rem 2rem transparent;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0px 1.5rem 1.5rem $blackShadow;
+    background-color: lighten($green, 5);
+  }
+  &:active {
+    background-color: darken($green, 6);
+  }
+}
+
+.soc {
+  box-shadow: 0px 0.5rem 1rem $blackShadow;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0px 1.5rem 1.5rem $blackShadow;
+  }
+  &:active {
+    box-shadow: 0px 1rem 1rem $blackShadowFocus;
+  }
+}
